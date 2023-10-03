@@ -1,15 +1,22 @@
 import photo1 from "./chris-liverani-oCsaxvGCehM-unsplash.jpg";
+
 const createHome = function () {
+  // remove content from a previous page
+  while (content.firstChild) {
+    content.removeChild(content.lastChild);
+  }
+  content.className = "";
+  content.classList.add("content-home");
   const leftSide = document.createElement("div");
   content.appendChild(leftSide);
 
-  // Photo
+// Photo
   const photoMain = new Image();
   photoMain.src = photo1;
   photoMain.classList.add("photo-main");
   leftSide.appendChild(photoMain);
 
-  const rightSide = document.createElement("div");
+const rightSide = document.createElement("div");
   rightSide.classList.add("right-side");
   content.appendChild(rightSide);
 
@@ -29,7 +36,7 @@ const createHome = function () {
   orderBtn.textContent = "Order now";
   rightSide.appendChild(orderBtn);
 
-  const address = document.createElement("div");
+ const address = document.createElement("div");
   address.classList.add("address");
   const address1 = document.createElement("div");
   address1.textContent = "359 Sunshine Alley,";
@@ -39,7 +46,9 @@ const createHome = function () {
   address.appendChild(address2);
   rightSide.appendChild(address);
 
-  const hours = document.createElement("div");
+
+const hours = document.createElement("div");
+  hours.classList.add("opening-hours");
   const hours1 = document.createElement("div");
   hours1.textContent = "Mon - Fri: 10am - 9pm";
   const hours2 = document.createElement("div");
@@ -50,3 +59,6 @@ const createHome = function () {
 };
 
 export default createHome;
+
+
+
