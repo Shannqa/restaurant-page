@@ -3,6 +3,7 @@ import "./style.css";
 
 import createMenu from "./menu";
 import createHome from "./home";
+import createContact from "./contact";
 
 const body = document.querySelector("body");
 
@@ -16,6 +17,7 @@ const menu = document.createElement("button");
 menu.addEventListener("click", createMenu);
 menu.textContent = "Menu";
 const contact = document.createElement("button");
+contact.addEventListener("click", createContact);
 contact.textContent = "Contact";
 nav.appendChild(home);
 nav.appendChild(menu);
