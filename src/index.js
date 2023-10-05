@@ -4,6 +4,7 @@ import "./style.css";
 import createMenu from "./menu";
 import createHome from "./home";
 import createContact from "./contact";
+import createAbout from "./about";
 
 const body = document.querySelector("body");
 
@@ -19,9 +20,13 @@ menu.textContent = "Menu";
 const contact = document.createElement("button");
 contact.addEventListener("click", createContact);
 contact.textContent = "Contact";
+const about = document.createElement("button");
+about.addEventListener("click", createAbout);
+about.textContent = "About";
 nav.appendChild(home);
 nav.appendChild(menu);
 nav.appendChild(contact);
+nav.appendChild(about);
 body.appendChild(nav);
 
 // Content
