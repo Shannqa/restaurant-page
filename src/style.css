@@ -51,10 +51,10 @@ body {
   align-items: center;
 } */
 
-#content {
+/* #content {
   width: 1000px;
   margin: 0 auto;
-}
+} */
 
 .content-home {
   display: grid; 
@@ -62,6 +62,8 @@ body {
   gap: 5px;
   justify-items: center;
   align-items: center;
+  width: 1000px;
+  margin: 0 auto;
 }
 
 .photo-main {
@@ -77,6 +79,11 @@ body {
 
 .right-side > * {
   margin-bottom: 20px;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
 }
 
 .rest-summary {
@@ -110,6 +117,7 @@ body {
 
 .address {
   align-self: center;
+  margin-bottom: 1rem;
 }
 
 .opening-hours {
@@ -137,6 +145,7 @@ body {
 .menu-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 h1 {
@@ -169,3 +178,23 @@ h2 {
   font-style: italic;
   font-size: 0.9rem;
 }
+
+/* Contact.js */
+
+.contact-container {
+  display: grid; 
+  grid-template-columns: 500px auto;
+  gap: 5px;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.phone {
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+.photo-contact {
+  width: 300px;
+} 

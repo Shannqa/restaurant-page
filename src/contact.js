@@ -18,10 +18,28 @@ function createContact() {
     contactContainer.classList.add("contact-container");
     contentDiv.appendChild(contactContainer);
 
+    const leftSide = document.createElement("div");
+    leftSide.classList.add("left-side");
+    contactContainer.appendChild(leftSide);
+
+    const rightSide = document.createElement("div");
+    rightSide.classList.add("right-side");
+    contactContainer.appendChild(rightSide);
+
+    // photo
+    const photoContact = new Image();
+    photoContact.src = photo2;
+    photoContact.classList.add("photo-contact");
+    rightSide.appendChild(photoContact);
+
     // fill the page with data
-    const contactParagraph = document.createElement("p");
-    contactParagraph.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.";
-    contactContainer.appendChild(contactParagraph);
+    const contactParagraph1 = document.createElement("p");
+    contactParagraph1.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.";
+    leftSide.appendChild(contactParagraph1);
+
+    const contactParagraph2 = document.createElement("p");
+    contactParagraph2.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.";
+    leftSide.appendChild(contactParagraph2);
 
     const address = document.createElement("div");
     address.classList.add("address");
@@ -31,12 +49,22 @@ function createContact() {
     address2.textContent = "New York, NY 99271";
     address.appendChild(address1);
     address.appendChild(address2);
-    contactContainer.appendChild(address);
+    leftSide.appendChild(address);
+
+    const hours = document.createElement("div");
+    hours.classList.add("opening-hours");
+    const hours1 = document.createElement("div");
+    hours1.textContent = "Mon - Fri: 10am - 9pm";
+    const hours2 = document.createElement("div");
+    hours2.textContent = "Sat - Sun: 10am - 11pm";
+    leftSide.appendChild(hours);
+    hours.appendChild(hours1);
+    hours.appendChild(hours2);
 
     const phone = document.createElement("div");
     phone.classList.add("phone");
     phone.textContent = "Call us: 123 456 789";
-    contactContainer.appendChild(phone);
+    leftSide.appendChild(phone);
 
 
 }
