@@ -1,6 +1,3 @@
-// Resources: https://unsplash.com/photos/5xltWMpkN3E
-// https://unsplash.com/photos/oCsaxvGCehM
-
 function createAbout() {
     const contentDiv = document.querySelector("#content");
 
@@ -17,21 +14,35 @@ function createAbout() {
     contentDiv.appendChild(aboutH1);
     const aboutContainer = document.createElement("div");
     aboutContainer.classList.add("about-container");
+
+    const spanAuthor = document.createElement("span");
+    const aAuthor = document.createElement("a");
+    const h2 = document.createElement("h2");
+    const ul = document.createElement("ul");
+    const li1 = document.createElement("li");
+    const li2 = document.createElement("li");
+
+    spanAuthor.textContent = "Website created by Shannqa. Check out ";
+    aAuthor.textContent = "my other projects."
+    aAuthor.setAttribute("href", "https://shannqa.github.io/homepage/index.html");
+    h2.textContent = "Resources";
+
+    const resPhoto1 = document.createElement("a");
+    resPhoto1.setAttribute("href", "https://unsplash.com/@patrick_schneider?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash");
+    resPhoto1.textContent = "Photo by Patrick Schneider from Unsplash";
+
+    const resPhoto2 = document.createElement("a");
+    resPhoto2.setAttribute("href", "https://unsplash.com/@chrisliverani?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash");
+    resPhoto2.textContent = "Photo by Chris Liverani from Unsplash";
+
+    li1.appendChild(resPhoto1);
+    li2.appendChild(resPhoto2);
+    ul.appendChild(li1);
+    ul.appendChild(li2);
+    aboutContainer.appendChild(spanAuthor);
+    aboutContainer.appendChild(aAuthor);
+    aboutContainer.appendChild(h2);
+    aboutContainer.appendChild(ul);
     contentDiv.appendChild(aboutContainer);
-
-const resPhoto1 = document.createElement("a");
-resPhoto1.setAttribute("href", "https://unsplash.com/@patrick_schneider?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash");
-resPhoto1.textContent = "Photo by Patrick Schneider from Unsplash";
-
-const resPhoto2 = document.createElement("a");
-resPhoto2.setAttribute("href", "https://unsplash.com/@chrisliverani?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash");
-resPhoto2.textContent = "Photo by Chris Liverani from Unsplash";
-
-aboutContainer.appendChild(resPhoto1);
-aboutContainer.appendChild(resPhoto2);
-
 }
-// Photo by <a href="https://unsplash.com/@patrick_schneider?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Patrick Schneider</a> on <a href="https://unsplash.com/photos/5xltWMpkN3E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-  
-// Photo by <a href="https://unsplash.com/@chrisliverani?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chris Liverani</a> on <a href="https://unsplash.com/photos/oCsaxvGCehM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-export default createAbout;
+    export default createAbout;
