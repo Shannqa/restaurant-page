@@ -9,6 +9,18 @@ body {
   align-items: center;
 }
 
+a, a:visited {
+  color: black;
+}
+
+a:hover {
+  color: orangered;
+}
+
+a:active {
+  color: rgb(2, 2, 119);
+}
+
 .nav {
   display: flex;
   justify-content: center;
@@ -198,17 +210,3 @@ h2 {
 .photo-contact {
   width: 300px;
 } 
-
-/* About.js */
-a, a:visited {
-  color: black;
-}
-
-a:hover {
-  color: orangered;
-}
-
-a:active {
-  color: rgb(2, 2, 119);
-}
-
